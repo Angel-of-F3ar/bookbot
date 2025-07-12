@@ -16,3 +16,13 @@ def all_char(words):
     else:
       chars[low_char] = 1
   return chars
+
+def sort_by_num(item):
+  return item["num"]
+
+def sort_on(char_dict):
+  report = []
+  for char, num in char_dict.items():
+    report.append({"char": char, "num": num})
+  report.sort(key=sort_by_num, reverse = True)
+  return report
